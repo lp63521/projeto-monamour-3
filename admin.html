@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Admin — Monamour Secrets</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="firebase-config.js"></script>
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <img src="/mnt/data/Imagem do WhatsApp de 2025-11-21 à(s) 15.37.44_4c3182b8.jpg" class="logo" alt="Monamour"/>
+    <nav>
+      <a href="index.html">Loja</a>
+      <button id="signOut" class="btn-outline">Sair</button>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h2>Admin — Produtos</h2>
+    <div id="adminArea">
+      <div>
+        <label>Título</label><input id="pTitle"/>
+        <label>Descrição</label><input id="pDesc"/>
+        <label>Preço (valor numérico)</label><input id="pPrice" type="number"/>
+        <button id="addProd" class="btn-primary">Adicionar Produto</button>
+      </div>
+      <hr/>
+      <div id="prodList"></div>
+    </div>
+  </main>
+</body>
