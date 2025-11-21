@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Login Admin</title><link rel="stylesheet" href="style.css"/></head>
+<body>
+  <main class="section">
+    <h2>Admin Login</h2>
+    <input id="email" placeholder="email"/><input id="pass" type="password" placeholder="senha"/><button id="doLogin" class="btn-primary">Entrar</button>
+  </main>
+  <script src="firebase-config.js" defer></script>
+  <script>
+    document.getElementById("doLogin").onclick = async ()=>{
+      const em = document.getElementById("email").value;
+      const pw = document.getElementById("pass").value;
+      try{ await firebase.auth().signInWithEmailAndPassword(em,pw); window.location.href="admin.html"; }
+      catch(e){ alert("Erro login: "+e.message); }
+    };
+  </script>
+</body>
+</html>
